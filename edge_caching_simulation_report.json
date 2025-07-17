@@ -1,0 +1,28 @@
+{
+  "simulation_summary": {
+    "total_requests": 200,
+    "devices": 15,
+    "edge_servers": 4
+  },
+  "with_edge_caching": {
+    "cache_hit_ratio": "85.00%",
+    "average_latency_ms": "46.30",
+    "total_bandwidth_mb": "58.95",
+    "total_energy_joules": "82.70",
+    "cache_hits": 170,
+    "cache_misses": 30
+  },
+  "without_edge_caching": {
+    "cache_hit_ratio": "0.00%",
+    "average_latency_ms": "200.00",
+    "total_bandwidth_mb": "102.08",
+    "total_energy_joules": "255.19",
+    "cache_hits": 0,
+    "cache_misses": 200
+  },
+  "performance_improvements": {
+    "latency_reduction": "76.8%",
+    "bandwidth_savings": "42.2%",
+    "energy_savings": "67.6%"
+  }
+}

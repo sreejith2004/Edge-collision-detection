@@ -1,0 +1,101 @@
+{
+    "network_config": {
+      "edge_servers": [
+        {
+          "id": "edge_01",
+          "location": "Mumbai",
+          "cache_capacity_mb": 1000,
+          "processing_power": 1.2,
+          "latency_ms": 25
+        },
+        {
+          "id": "edge_02", 
+          "location": "Delhi",
+          "cache_capacity_mb": 800,
+          "processing_power": 1.0,
+          "latency_ms": 30
+        },
+        {
+          "id": "edge_03",
+          "location": "Bangalore",
+          "cache_capacity_mb": 1200,
+          "processing_power": 1.1,
+          "latency_ms": 20
+        }
+      ],
+      "cloud_server": {
+        "id": "cloud_main",
+        "location": "US-East",
+        "latency_ms": 450,
+        "bandwidth_mbps": 100
+      },
+      "iot_devices": [
+        {
+          "type": "temperature_sensor",
+          "count": 50,
+          "data_size_kb": 2,
+          "frequency_seconds": 30
+        },
+        {
+          "type": "camera_sensor",
+          "count": 20,
+          "data_size_kb": 500,
+          "frequency_seconds": 60
+        },
+        {
+          "type": "motion_detector",
+          "count": 100,
+          "data_size_kb": 1,
+          "frequency_seconds": 10
+        }
+      ]
+    },
+    "performance_benchmarks": {
+      "with_edge_caching": {
+        "average_latency_ms": 45,
+        "cache_hit_ratio": 0.85,
+        "bandwidth_savings_percent": 70,
+        "energy_savings_percent": 60
+      },
+      "without_edge_caching": {
+        "average_latency_ms": 480,
+        "cache_hit_ratio": 0.0,
+        "bandwidth_usage_percent": 100,
+        "energy_consumption_percent": 100
+      }
+    },
+    "data_patterns": {
+      "popular_content": {
+        "firmware_updates": 0.15,
+        "configuration_data": 0.25,
+        "sensor_readings": 0.45,
+        "analytics_data": 0.15
+      },
+      "access_frequency": {
+        "high": 0.2,
+        "medium": 0.3,
+        "low": 0.5
+      }
+    },
+    "simulation_scenarios": [
+      {
+        "name": "Peak Traffic",
+        "description": "High IoT device activity during business hours",
+        "device_multiplier": 2.0,
+        "cache_efficiency": 0.90
+      },
+      {
+        "name": "Normal Operation",
+        "description": "Standard IoT network operation",
+        "device_multiplier": 1.0,
+        "cache_efficiency": 0.85
+      },
+      {
+        "name": "Low Activity",
+        "description": "Minimal IoT device activity during off-hours",
+        "device_multiplier": 0.3,
+        "cache_efficiency": 0.75
+      }
+    ]
+  }
+  
